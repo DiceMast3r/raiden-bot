@@ -1,9 +1,10 @@
 const {Client, Intents} = require('discord.js');
-const dotenv = require('dotenv');
+const config = require('./config.json')
+//const dotenv = require('dotenv');
 const axios = require('axios'); 
 const prefix = "!"
 
-dotenv.config();
+//dotenv.config();
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -82,4 +83,4 @@ client.on('guildCreate', guild => {
 })
 
 
-client.login(process.env.Token);
+client.login(config.token);
