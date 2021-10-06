@@ -66,7 +66,7 @@ client.on('messageCreate', async msg => {
         console.log(food)
         msg.reply("เพิ่ม " +"'" + args[0] + "'" + " ลงในรายชื่อ")
     }
-    else if (command == "food") {
+    else if (command == "กินไรดี") {
         var x = getRandomInt(0, food.length);
         msg.reply(food[x])
         console.log(food[x])
