@@ -34,7 +34,7 @@ const food = []
 
 client.on('messageCreate', async msg => {
     if (msg.content == "!help") {
-        msg.reply("!sev = แสดงสถานะ server\n!ข้าว = สุ่มข้าว\n!addf <ชื่อข้าว> = เพิ่มข้าวลงในรายชื่อ\n!clearfood = ล้างรายชื่อข้าว")
+        msg.reply("!sev = แสดงสถานะ server\n!ข้าว = แสดงรายชื่อข้าว\n!กินไรดี = สุ่มข้าว\n!addf <ชื่อข้าว> = เพิ่มข้าวลงในรายชื่อ\n!clearfood = ล้างรายชื่อข้าว\n!memes = ขอมีม")
     }
     else if (msg.content == "!memes") {
         const meme = await axios.get('https://meme-api.herokuapp.com/gimme')
