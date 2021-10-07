@@ -67,9 +67,14 @@ client.on('messageCreate', async msg => {
         msg.reply("เพิ่ม " +"'" + args[0] + "'" + " ลงในรายชื่อ")
     }
     else if (command == "กินไรดี") {
-        var x = getRandomInt(0, food.length);
-        msg.reply(food[x])
-        console.log(food[x])
+        if (food.length == 0) {
+            msg.reply("รายชื่อว่าง")
+        }
+        else {
+            var x = getRandomInt(0, food.length);
+            msg.reply(food[x])
+            console.log(food[x])    
+        }
     }
     else if (command == "clearfood") {
         food.length = 0
