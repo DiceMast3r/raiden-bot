@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "DiceMast3r",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.22.0",
