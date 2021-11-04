@@ -34,18 +34,18 @@ const food = []
 
 client.on('messageCreate', async msg => {
     if (msg.content == "!help") {
-        msg.reply("!sev = แสดงสถานะ server\n!ข้าว = แสดงรายชื่อข้าว\n!กินไรดี = สุ่มข้าว\n!addf <ชื่อข้าว> = เพิ่มข้าวลงในรายชื่อ\n!clearfood = ล้างรายชื่อข้าว\n!memes = ขอมีม")
+        msg.reply("!info = แสดงสถานะ server\n!list = แสดงรายชื่อข้าว\n!food = สุ่มข้าว\n!addf <ชื่อข้าว> = เพิ่มข้าวลงในรายชื่อ\n!clearfood = ล้างรายชื่อข้าว\n!memes = ขอมีม")
     }
     else if (msg.content == "!memes") {
         const meme = await axios.get('https://meme-api.herokuapp.com/gimme')
         const img2 = meme.data.url;
         msg.reply(img2);
     }
-    else if (msg.content == "!sev") {
+    else if (msg.content == "!info") {
         msg.reply("ชื่อเซิร์ฟเวอร์: " + msg.guild.name);
         msg.reply("สมาชิกทั้งหมด: "+ msg.guild.memberCount + " คน");
     }
-    else if (msg.content == "!ข้าว") {
+    else if (msg.content == "!list") {
         if (food.length == 0) {
             msg.reply("รายชื่อว่าง")
         }
@@ -68,7 +68,7 @@ client.on('messageCreate', async msg => {
         console.log(food)
         msg.reply("เพิ่ม " +"'" + args.join(', ') + "'" + " ลงในรายชื่อ")
     }
-    else if (command == "กินไรดี") {
+    else if (command == "food") {
         if (food.length == 0) {
             msg.reply("รายชื่อว่าง")
         }
