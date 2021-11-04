@@ -62,9 +62,11 @@ client.on('messageCreate', async msg => {
 	const command = split[0];
 	const args = split.slice(1);
     if(command == "addf") {
-        food.push(args[0])
+        for (var i = 0; i < args.length; i++){
+            food.push(args[i]);
+        }
         console.log(food)
-        msg.reply("เพิ่ม " +"'" + args[0] + "'" + " ลงในรายชื่อ")
+        msg.reply("เพิ่ม " +"'" + args.join(', ') + "'" + " ลงในรายชื่อ")
     }
     else if (command == "กินไรดี") {
         if (food.length == 0) {
