@@ -30,7 +30,7 @@ const food = [];
 client.on("messageCreate", async (msg) => {
   if (msg.content == "!help") {
     msg.reply(
-      "!info = แสดงสถานะ server\n!list = แสดงรายชื่อข้าว\n!food = สุ่มข้าว\n!addf <ชื่อข้าว> = เพิ่มข้าวลงในรายชื่อ\n!clear = ล้างรายชื่อข้าว\n!memes = ขอมีม"
+      "!info = แสดงสถานะ server\n!list = แสดงรายชื่ออาหาร\n!food = สุ่มอาหาร\n!addf <ชื่ออาหาร1> <ชื่ออาหาร2> ... = เพิ่มอาหารลงในรายชื่อ\n!clear = ล้างรายชื่ออาหาร\n!memes = ขอมีม"
     );
   } else if (msg.content == "!memes") {
     const meme = await axios.get("https://meme-api.herokuapp.com/gimme");
@@ -77,7 +77,7 @@ client.on("messageCreate", async (msg) => {
 
 client.on("guildCreate", (guild) => {
   guild.systemChannel.send(
-    "Hello I'm Raiden Bot!, Use !help to see command XD"
+    "ไม่รู้จะกินอะไรหรอ? ให้เอย์จังช่วยเลือกสิ!! ถึงจะทำอาหารไม่เป็นแต่ก็กินเก่งนะ!"
   );
 });
 
