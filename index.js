@@ -1,5 +1,5 @@
 const { Client, Intents } = require("discord.js");
-const config = require("./config.json");
+//const config = require("./config.json");
 //const dotenv = require('dotenv');
 const axios = require("axios");
 const prefix = "!";
@@ -81,4 +81,4 @@ client.on("guildCreate", (guild) => {
   );
 });
 
-client.login(config.token);
+client.login(process.env.DJS_TOKEN);
