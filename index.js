@@ -20,11 +20,6 @@ client.on("ready", () => {
   console.log("Bot ready");
 });
 
-async function getMeme() {
-  const res = await axios.get("https://meme-api.herokuapp.com/gimme");
-  return null;
-}
-
 const food = [];
 
 client.on("messageCreate", async (msg) => {
