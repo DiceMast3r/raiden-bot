@@ -10,20 +10,9 @@ for (var i = 0; i < 10; i++){
 var x = getRandomInt(0, arr.length);
 console.log(arr[x]);*/
 
-
-var prefix = "!"
-var msg = '!กินไรดี ข้าวผัด แกงส้ม ข้าวปั้น'
-var food = [];
-const withoutPrefix = msg.slice(prefix.length);
-const split = withoutPrefix.split(/ +/);
-const command = split[0];
-const args = split.slice(1)
-console.log(split);
-console.log(args);
-for (var i = 0; i < args.length; i++) {
-    food.push(args[i])
+var a = []
+for (var i = 0; i < 10; i++) {
+    console.log(i + 1)
 }
-console.log(food);
-console.log(args.join(', '))
 
 
