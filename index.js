@@ -30,9 +30,9 @@ const food = [];
 client.on("messageCreate", async (msg) => {
   if (msg.content == "!help") {
     msg.reply(
-      "!info = แสดงสถานะ server\n!list = แสดงรายชื่ออาหาร\n!food = สุ่มอาหาร\n!addf <ชื่ออาหาร1> <ชื่ออาหาร2> ... = เพิ่มอาหารลงในรายชื่อ\n!clear = ล้างรายชื่ออาหาร\n!memes = ขอมีม"
+      "!info = แสดงสถานะ server\n!list = แสดงรายชื่ออาหาร\n!food = สุ่มอาหาร\n!addf <ชื่ออาหาร1> <ชื่ออาหาร2> ... = เพิ่มอาหารลงในรายชื่อ\n!clear = ล้างรายชื่ออาหาร\n!meme = ขอมีม"
     );
-  } else if (msg.content == "!memes") {
+  } else if (msg.content == "!meme") {
     const meme = await axios.get("https://meme-api.herokuapp.com/gimme");
     const img2 = meme.data.url;
     msg.reply(img2);
