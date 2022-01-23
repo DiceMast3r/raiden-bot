@@ -18,6 +18,7 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log("Bot ready");
+  client.user.setActivity("Yae Publishing House", {type: "WATCHING"}).catch(console.error);
 });
 
 const food = [];
