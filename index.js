@@ -18,7 +18,7 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log("Bot ready");
-  client.user.setActivity("Yae Publishing House", {type: "WATCHING"});
+  client.user.setActivity("Yae Publishing House", { type: "WATCHING" });
 });
 
 const food = [];
